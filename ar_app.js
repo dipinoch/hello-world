@@ -88,13 +88,15 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1	= new THREE.CubeGeometry(1,1,1);
+    var geometry1	= new THREE.TorusKnotGeometry(0.3,0.1,64,16);
+	var material1	= new THREE.MeshNormalMaterial();
+	//let geometry1	= new THREE.CubeGeometry(1,1,1);
 	// let material1	= new THREE.MeshNormalMaterial({
 	// 	transparent: true,
 	// 	opacity: 0.5,
 	// 	side: THREE.DoubleSide
     // }); 
-    let material1 = new THREE.MeshBasicMaterial({color: 'red'});  
+    //let material1 = new THREE.MeshBasicMaterial({color: 'red'});  
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 0.5;
